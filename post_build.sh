@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-echo "Installing Playwright browsers"
+
+# Install Playwright and its dependencies (including Chromium)
 npx playwright install --with-deps
