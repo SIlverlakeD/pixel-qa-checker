@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-echo "Installing Playwright browser dependencies"
+#!/bin/bash
 playwright install
