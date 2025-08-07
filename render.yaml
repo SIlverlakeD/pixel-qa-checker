@@ -1,11 +1,9 @@
 services:
   - type: web
-    name: pixel-qa-tool
+    name: pixel-qa-checker
     env: python
-    buildCommand: |
-      pip install -r requirements.txt
-      playwright install
-    startCommand: streamlit run pixel_qa_ui_with_validation.py --server.port=10000 --server.address=0.0.0.0
-   build:
-      scripts:
-        postBuild: ./post_build.sh
+    buildCommand: "./post_build.sh"
+    startCommand: "streamlit run src/pixel_qa_ui_with_validation.py"
+    buildFilter:
+      paths:
+        - "**/*"
