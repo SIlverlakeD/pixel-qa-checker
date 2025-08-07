@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pixel-qa-tool
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install
+    startCommand: streamlit run pixel_qa_ui_with_validation.py --server.port=10000
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: '1'
