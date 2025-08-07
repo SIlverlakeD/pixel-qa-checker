@@ -42,7 +42,7 @@ async def check_pixels_and_params(url):
         if pixel_hits:
             for domain, hit_url, status in pixel_hits:
                 results.append(f"[{domain}] {status}\\n-> {hit_url}")
-→ {hit_url}")
+-> {hit_url}")
         else:
             results.append("No pixels detected.")
 
